@@ -25,6 +25,12 @@ extension Bool: JSONDecodable {
   }
 }
 
+extension Float: JSONDecodable {
+    public static func decode(j: JSONValue) -> Float? {
+        return j.value()
+    }
+}
+
 //MARK: JSONResultDecodable
 func makeResultDecodable<A:JSONDecodable>(f: JSONValue -> A?, j: JSONValue) -> JSONResult<A> {
     return JSONResult(optional: f(j))
@@ -54,12 +60,6 @@ extension Bool: JSONDecodable {
   }
 }
 
-extension Float: JSONDecodable {
-  public static func decode(j: JSONValue) -> Float? {
-    return j.value()
-  }
-}
-
 //MARK: JSONEncodable
 extension String: JSONEncodable {
   public func encode() -> JSONValue {
@@ -68,6 +68,18 @@ extension String: JSONEncodable {
 }
 
 extension Int: JSONEncodable {
+  public func encode() -> JSONValue {
+    return .JSONNumber(self)
+  }
+}
+
+extension Double: JSONEncodable {
+  public func encode() -> JSONValue {
+    return .JSONNumber(self)
+  }
+}
+
+extension Bool: JSONEncodable {
   public func encode() -> JSONValue {
     return .JSONNumber(self)
   }
@@ -90,16 +102,5 @@ extension Dictionary {
       }
     }
     return .JSONObject(dict)
-  }
-}
-extension Double: JSONEncodable {
-  public func encode() -> JSONValue {
-    return .JSONNumber(self)
-  }
-}
-
-extension Bool: JSONEncodable {
-  public func encode() -> JSONValue {
-    return .JSONNumber(self)
   }
 }
