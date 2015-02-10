@@ -13,6 +13,7 @@
 		B35986211A81545500F1FDE1 /* JSONResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35986201A81545500F1FDE1 /* JSONResultTests.swift */; };
 		B36C023B1A8A8ACF001D687A /* JSONEncodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C023A1A8A8ACF001D687A /* JSONEncodableTests.swift */; };
 		B359861D1A8136A500F1FDE1 /* JSONResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861C1A8136A500F1FDE1 /* JSONResult.swift */; };
+		B359861F1A813B3B00F1FDE1 /* JSONResultOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861E1A813B3B00F1FDE1 /* JSONResultOperators.swift */; };
 		EA08313119D5EEAF003B90D7 /* TypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08313019D5EEAF003B90D7 /* TypeTests.swift */; };
 		EA08313319D5EEF2003B90D7 /* post_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = EA08313219D5EEF2003B90D7 /* post_comments.json */; };
 		EA08313519D5EFC0003B90D7 /* types.json in Resources */ = {isa = PBXBuildFile; fileRef = EA08313419D5EFC0003B90D7 /* types.json */; };
@@ -154,6 +155,7 @@
 		B35986201A81545500F1FDE1 /* JSONResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResultTests.swift; sourceTree = "<group>"; };
 		B36C023A1A8A8ACF001D687A /* JSONEncodableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodableTests.swift; sourceTree = "<group>"; };
 		B359861C1A8136A500F1FDE1 /* JSONResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResult.swift; sourceTree = "<group>"; };
+		B359861E1A813B3B00F1FDE1 /* JSONResultOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResultOperators.swift; sourceTree = "<group>"; };
 		EA08313019D5EEAF003B90D7 /* TypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTests.swift; sourceTree = "<group>"; };
 		EA08313219D5EEF2003B90D7 /* post_comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = post_comments.json; sourceTree = "<group>"; };
 		EA08313419D5EFC0003B90D7 /* types.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = types.json; sourceTree = "<group>"; };
