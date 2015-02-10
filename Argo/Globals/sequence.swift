@@ -5,3 +5,9 @@ func sequence<T>(xs: [T?]) -> [T]? {
     return curry(+) <^> accum <*> (pure <^> elem)
   }
 }
+
+func sequence<T>(xs: [JSONResult<T>]) -> JSONResult<[T]> {
+  return reduce(xs, .Success([])) { accum, elem in
+    return curry(+) <^> accum <*> (pure <^> elem)
+  }
+}
