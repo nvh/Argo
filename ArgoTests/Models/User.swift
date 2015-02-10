@@ -19,3 +19,12 @@ extension User: JSONDecodable {
       <*> j <|? "email"
   }
 }
+
+extension User: JSONResultDecodable {
+  static func decodeResult(j: JSONValue) -> JSONResult<User> {
+    return User.create
+      <^> j <-| "id"
+      <*> j <-| "name"
+      <*> j <-|? "email"
+  }
+}
