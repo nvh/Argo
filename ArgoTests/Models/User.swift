@@ -20,6 +20,15 @@ extension User: JSONDecodable {
   }
 }
 
+extension User: JSONResultDecodable {
+  static func decodeResult(j: JSONValue) -> JSONResult<User> {
+    return User.create
+      <^> j <-| "id"
+      <*> j <-| "name"
+      <*> j <-|? "email"
+  }
+}
+
 extension User: JSONEncodable {
   func encode() -> JSONValue {
     return ["id":id,"name":name,"email":email]
