@@ -54,13 +54,13 @@ extension Bool: JSONDecodable {
   }
 }
 
-//MARK: JSONEncodable
 extension Float: JSONDecodable {
   public static func decode(j: JSONValue) -> Float? {
     return j.value()
   }
 }
 
+//MARK: JSONEncodable
 extension String: JSONEncodable {
   public func encode() -> JSONValue {
     return .JSONString(self)
