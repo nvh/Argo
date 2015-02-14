@@ -5,5 +5,5 @@ public protocol JSONDecodable {
 
 public protocol JSONResultDecodable: JSONDecodable {
   typealias DecodedResultType = Self
-  class func decodeResult(JSONValue) -> JSONResult<DecodedResultType>
+  static func decodeResult(JSONValue) -> JSONResult<DecodedResultType>
 }
