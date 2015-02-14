@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31647C61A8F9B2E00679BBA /* JSONResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861C1A8136A500F1FDE1 /* JSONResult.swift */; };
+		B31647C71A8F9B2E00679BBA /* JSONResultOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861E1A813B3B00F1FDE1 /* JSONResultOperators.swift */; };
 		B359861D1A8136A500F1FDE1 /* JSONResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861C1A8136A500F1FDE1 /* JSONResult.swift */; };
 		B359861F1A813B3B00F1FDE1 /* JSONResultOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861E1A813B3B00F1FDE1 /* JSONResultOperators.swift */; };
 		B35986211A81545500F1FDE1 /* JSONResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35986201A81545500F1FDE1 /* JSONResultTests.swift */; };
@@ -627,8 +629,10 @@
 				F8CBE6681A64526300316FBC /* Dictionary.swift in Sources */,
 				F8CBE6641A6450F200316FBC /* sequence.swift in Sources */,
 				F862E0AA1A519D360093B028 /* JSONValue.swift in Sources */,
+				B31647C71A8F9B2E00679BBA /* JSONResultOperators.swift in Sources */,
 				F89335741A4CE93600B88685 /* Operators.swift in Sources */,
 				F89335701A4CE92D00B88685 /* JSONDecodable.swift in Sources */,
+				B31647C61A8F9B2E00679BBA /* JSONResult.swift in Sources */,
 				F89335761A4CE93600B88685 /* JSONOperators.swift in Sources */,
 				F8E33FA31A51DE510025A6E5 /* curry.swift in Sources */,
 			);
