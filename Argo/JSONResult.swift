@@ -9,10 +9,22 @@
 import Foundation
 import Runes
 
+public final class Box<T> {
+  public let value: T
+
+  public init(_ value: T) {
+    self.value = value
+  }
+  
+  public func map<U>(f: T -> U) -> Box<U> {
+    return Box<U>(f(value))
+  }
+}
+
 let ArgoErrorDomain = "ArgoErrorDomain"
 
 public enum JSONResult<T> {
-  case Success(@autoclosure() -> T)
+  case Success(Box<T>)
   case Failure(NSError)
 }
 
@@ -24,7 +36,7 @@ extension JSONResult {
   
   public init(optional: T?, errorMessage: String? = nil) {
     if let value = optional {
-      self = .Success(value)
+      self = .Success(Box(value))
     } else {
       let message = errorMessage ?? "Constructing JSONResult from nil value"
       let error = NSError(domain: ArgoErrorDomain, code: 0, userInfo: [NSLocalizedDescriptionKey:message])
@@ -42,8 +54,8 @@ extension JSONResult {
   }
   public var value: T? {
     switch self {
-    case let .Success(value):
-      return value()
+    case let .Success(box):
+      return box.value
     default:
       return nil
     }
@@ -53,8 +65,8 @@ extension JSONResult {
 extension JSONResult: Printable {
     public var description: String {
         switch self {
-        case .Success(let value):
-            return "Success: \(value())"
+        case .Success(let box):
+            return "Success: \(box.value)"
         case .Failure(let error):
             return "Failure: \(error.localizedDescription)"
         }
@@ -101,20 +113,20 @@ public func >>-<T, U>(a: JSONResult<T>, f: T -> JSONResult<U>) -> JSONResult<U> 
 }
 
 public func pure<T>(a: T) -> JSONResult<T> {
-  return .Success(a)
+  return .Success(Box(a))
 }
 
 extension JSONResult {
   func map<U>(f: (T) -> U) -> JSONResult<U> {
     switch self {
-    case .Success(let x): return .Success(f(x()))
+    case .Success(let box): return .Success(box.map(f))
     case .Failure(let error): return .Failure(error)
     }
   }
   
   func apply<U>(f: JSONResult<T -> U>) -> JSONResult<U> {
     switch (self, f) {
-    case (.Success(let x),.Success(let fx)): return .Success(fx()(x()))
+    case (.Success(let box),.Success(let boxF)): return .Success(box.map(boxF.value))
     case (.Failure(let error),_): return .Failure(error)
     case (_,.Failure(let error)): return .Failure(error)
     default:
@@ -124,7 +136,7 @@ extension JSONResult {
     
   func flatMap<U>(f: T -> JSONResult<U>) -> JSONResult<U> {
     switch self {
-    case .Success(let x): return f(x())
+    case .Success(let box): return f(box.value)
     case .Failure(let error): return .Failure(error)
     }
   }
