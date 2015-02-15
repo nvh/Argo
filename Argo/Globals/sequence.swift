@@ -1,4 +1,5 @@
 import Runes
+import Box
 
 func sequence<T>(xs: [T?]) -> [T]? {
   return reduce(xs, []) { accum, elem in
