@@ -8,18 +8,7 @@
 
 import Foundation
 import Runes
-
-public final class Box<T> {
-  public let value: T
-
-  public init(_ value: T) {
-    self.value = value
-  }
-  
-  public func map<U>(f: T -> U) -> Box<U> {
-    return Box<U>(f(value))
-  }
-}
+import Box
 
 let ArgoErrorDomain = "ArgoErrorDomain"
 
