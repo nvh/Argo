@@ -85,6 +85,12 @@ extension Bool: JSONEncodable {
   }
 }
 
+extension Float: JSONEncodable {
+  public func encode() -> JSONValue {
+    return .JSONNumber(self)
+  }
+}
+
 //These could be JSONEncodable if Swift would allow us to provide public declarations in extension of generic types
 extension Array {
   func encode() -> JSONValue {

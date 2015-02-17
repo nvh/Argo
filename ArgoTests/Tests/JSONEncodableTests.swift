@@ -51,7 +51,7 @@ class JSONEncodableTests: XCTestCase {
     
     XCTAssert(json != nil)
     XCTAssert(model != nil)
-    XCTAssertEqual(json!,model!.encode())
+    XCTAssertEqual(json!.toString(),model!.encode().toString())
   }
 
   func testCommentDecodingWithEmbeddedUserName() {
@@ -67,7 +67,7 @@ class JSONEncodableTests: XCTestCase {
     let json = JSONValue.parse <^> JSONFileReader.JSON(fromFile: "post_no_comments")
     let post = json >>- Post.decode
     
-    XCTAssert(post != nil)
+    XCTAssert(json != nil)
     XCTAssert(post != nil)
     XCTAssertEqual(post!.encode(), json!)
   }
@@ -76,9 +76,44 @@ class JSONEncodableTests: XCTestCase {
     let json = JSONValue.parse <^> JSONFileReader.JSON(fromFile: "post_comments")
     let post = json >>- Post.decode
     
-    XCTAssert(post != nil)
+    XCTAssert(json != nil)
     XCTAssert(post != nil)
     XCTAssertEqual(post!.encode(), json!)
   }
+  
+  func testJSONValueDump() {
+    let readFile: AnyObject? = JSONFileReader.JSON(fromFile: "post_comments")
+    let json = JSONValue.parse <^> readFile
+    let post = json >>- Post.decode
+    XCTAssert(readFile != nil)
+    XCTAssert(json != nil)
+    XCTAssert(post != nil)
+    let unparsed: AnyObject = post!.encode().dump()
+    XCTAssertTrue(unparsed.isEqual(readFile),"Unparsed objects not equal")
+  }
 
+  func testJSONValueDumpAllTypes() {
+    let readFile: AnyObject? = JSONFileReader.JSON(fromFile: "array_types")
+    let json = JSONValue.parse <^> readFile
+    XCTAssert(readFile != nil)
+    XCTAssert(json != nil)
+    let unparsed: AnyObject = json!.dump()
+    XCTAssertTrue(unparsed.isEqual(readFile),"Unparsed objects not equal")
+  }
+
+  func testJSONValueToString() {
+    let filename = "array_types"
+    let path = NSBundle(forClass: self.dynamicType).pathForResource(filename, ofType: "json")
+    XCTAssert(path != nil)
+    let data = NSData(contentsOfFile: path!)
+    XCTAssertNotNil(data)
+    let fileString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+    
+    let readFile: AnyObject? = JSONFileReader.JSON(fromFile: filename)
+    let json = JSONValue.parse <^> readFile
+    XCTAssertNotNil(readFile)
+    XCTAssert(json != nil)
+    let jsonString: String = json!.toString()
+    XCTAssertEqual(fileString!,jsonString)
+  }
 }
