@@ -20,10 +20,24 @@
 		B359861F1A813B3B00F1FDE1 /* JSONResultOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861E1A813B3B00F1FDE1 /* JSONResultOperators.swift */; };
 		B35986211A81545500F1FDE1 /* JSONResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35986201A81545500F1FDE1 /* JSONResultTests.swift */; };
 		B3B1DE3E1A90E6F20007817F /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B1DE3D1A90E6F20007817F /* Box.framework */; };
+		B312B0961A92CEC90087888D /* Box.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B312C1331A92CD5000E32873 /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B312B0971A92CED00087888D /* Box.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B312C1301A92CD4100E32873 /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B312C1311A92CD4100E32873 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B312C1301A92CD4100E32873 /* Box.framework */; };
+		B312C1321A92CD4100E32873 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B312C1301A92CD4100E32873 /* Box.framework */; };
+		B312C1341A92CD5000E32873 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B312C1331A92CD5000E32873 /* Box.framework */; };
+		B312C1351A92CD5000E32873 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B312C1331A92CD5000E32873 /* Box.framework */; };
+		B31647C61A8F9B2E00679BBA /* JSONResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861C1A8136A500F1FDE1 /* JSONResult.swift */; };
+		B31647C71A8F9B2E00679BBA /* JSONResultOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861E1A813B3B00F1FDE1 /* JSONResultOperators.swift */; };
+		B31647C81A8F9B5B00679BBA /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351CE711A80ACE8008E20D0 /* JSONEncodable.swift */; };
+		B31647C91A8F9B6E00679BBA /* JSONEncodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C023A1A8A8ACF001D687A /* JSONEncodableTests.swift */; };
+		B351CE721A80ACE8008E20D0 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351CE711A80ACE8008E20D0 /* JSONEncodable.swift */; };
+		B359861D1A8136A500F1FDE1 /* JSONResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861C1A8136A500F1FDE1 /* JSONResult.swift */; };
+		B359861F1A813B3B00F1FDE1 /* JSONResultOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359861E1A813B3B00F1FDE1 /* JSONResultOperators.swift */; };
+		B35986211A81545500F1FDE1 /* JSONResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35986201A81545500F1FDE1 /* JSONResultTests.swift */; };
+		B36C023B1A8A8ACF001D687A /* JSONEncodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C023A1A8A8ACF001D687A /* JSONEncodableTests.swift */; };
 		B3B1DE3F1A90E7EE0007817F /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9FACF19D0EAB50031E006 /* Argo.framework */; };
 		B3B1DE401A90E8820007817F /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B1DE3D1A90E6F20007817F /* Box.framework */; };
 		B3B1DE411A90E8850007817F /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1DD1C1A90E4E80069891B /* Box.framework */; };
-		B3F1DD1D1A90E4E80069891B /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1DD1C1A90E4E80069891B /* Box.framework */; };
 		EA08313119D5EEAF003B90D7 /* TypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08313019D5EEAF003B90D7 /* TypeTests.swift */; };
 		EA08313319D5EEF2003B90D7 /* post_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = EA08313219D5EEF2003B90D7 /* post_comments.json */; };
 		EA08313519D5EFC0003B90D7 /* types.json in Resources */ = {isa = PBXBuildFile; fileRef = EA08313419D5EFC0003B90D7 /* types.json */; };
@@ -124,6 +138,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B312B0971A92CED00087888D /* Box.framework in CopyFiles */,
 				F87D9D8D1A92676F00C8AF1D /* Runes.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +149,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B312B0961A92CEC90087888D /* Box.framework in CopyFiles */,
 				F87D9D8F1A92677A00C8AF1D /* Runes.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +175,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B312C1301A92CD4100E32873 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Box.framework; sourceTree = "<group>"; };
+		B312C1331A92CD5000E32873 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Box.framework; sourceTree = "<group>"; };
 		B351CE711A80ACE8008E20D0 /* JSONEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodable.swift; sourceTree = "<group>"; };
 		B359861C1A8136A500F1FDE1 /* JSONResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResult.swift; sourceTree = "<group>"; };
 		B359861E1A813B3B00F1FDE1 /* JSONResultOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResultOperators.swift; sourceTree = "<group>"; };
@@ -222,6 +240,8 @@
 				F87D9D8A1A92676100C8AF1D /* Runes.framework in Frameworks */,
 				B3B1DE3E1A90E6F20007817F /* Box.framework in Frameworks */,
 				F8C05D451A649A04004A8D0F /* Runes.framework in Frameworks */,
+				B312C1311A92CD4100E32873 /* Box.framework in Frameworks */,
+				F87D9D8A1A92676100C8AF1D /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +253,9 @@
 				F87897ED1A927856009316A5 /* Runes.framework in Frameworks */,
 				B3B1DE401A90E8820007817F /* Box.framework in Frameworks */,
 				B3B1DE3F1A90E7EE0007817F /* Argo.framework in Frameworks */,
+				F87897EF1A927864009316A5 /* Argo.framework in Frameworks */,
+				B312C1321A92CD4100E32873 /* Box.framework in Frameworks */,
+				F87897ED1A927856009316A5 /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +266,8 @@
 				F87D9D8B1A92676400C8AF1D /* Runes.framework in Frameworks */,
 				B3F1DD1D1A90E4E80069891B /* Box.framework in Frameworks */,
 				F8C05D471A649A08004A8D0F /* Runes.framework in Frameworks */,
+				B312C1341A92CD5000E32873 /* Box.framework in Frameworks */,
+				F87D9D8B1A92676400C8AF1D /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +277,7 @@
 			files = (
 				B3B1DE411A90E8850007817F /* Box.framework in Frameworks */,
 				F893355F1A4CE83000B88685 /* Argo.framework in Frameworks */,
+				B312C1351A92CD5000E32873 /* Box.framework in Frameworks */,
 				F87897EE1A92785D009316A5 /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +450,7 @@
 		F87D9D841A92675400C8AF1D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B312C1301A92CD4100E32873 /* Box.framework */,
 				F87D9D851A92675400C8AF1D /* Runes.framework */,
 			);
 			name = iOS;
@@ -433,6 +460,7 @@
 		F87D9D861A92675400C8AF1D /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				B312C1331A92CD5000E32873 /* Box.framework */,
 				F87D9D871A92675400C8AF1D /* Runes.framework */,
 			);
 			name = Mac;
@@ -817,6 +845,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -873,6 +902,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -984,7 +1014,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Argo/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = Argo;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1008,7 +1037,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Argo/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = Argo;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
