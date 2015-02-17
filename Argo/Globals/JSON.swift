@@ -48,7 +48,7 @@ extension Double: JSONResultDecodable {
   }
 }
 
-extension Bool: JSONDecodable {
+extension Bool: JSONResultDecodable {
   public static func decodeResult(j: JSONValue) -> JSONResult<Bool> {
     return makeResultDecodable(Bool.decode,j)
   }
