@@ -25,12 +25,20 @@ extension JSONResult {
   
   public init(optional: T?, errorMessage: String? = nil) {
     if let value = optional {
-      self = .Success(Box(value))
+      self.init(value)
     } else {
       let message = errorMessage ?? "Constructing JSONResult from nil value"
       let error = NSError(domain: ArgoErrorDomain, code: 0, userInfo: [NSLocalizedDescriptionKey:message])
-      self = .Failure(error)
+      self.init(error: error)
     }
+  }
+
+  public init(_ value: T) {
+    self = .Success(Box(value))
+  }
+  
+  public init(error: NSError) {
+    self = .Failure(error)
   }
   
   public var error: NSError? {
