@@ -44,6 +44,10 @@
 		B31647C91A8F9B6E00679BBA /* JSONEncodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C023A1A8A8ACF001D687A /* JSONEncodableTests.swift */; };
 		B351CE721A80ACE8008E20D0 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351CE711A80ACE8008E20D0 /* JSONEncodable.swift */; };
 		B36C023B1A8A8ACF001D687A /* JSONEncodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C023A1A8A8ACF001D687A /* JSONEncodableTests.swift */; };
+		B3B1DE3F1A90E7EE0007817F /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9FACF19D0EAB50031E006 /* Argo.framework */; };
+		B3B1DE401A90E8820007817F /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B1DE3D1A90E6F20007817F /* Box.framework */; };
+		B3B1DE411A90E8850007817F /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1DD1C1A90E4E80069891B /* Box.framework */; };
+		B3F1DD1D1A90E4E80069891B /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1DD1C1A90E4E80069891B /* Box.framework */; };
 		EA08313119D5EEAF003B90D7 /* TypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08313019D5EEAF003B90D7 /* TypeTests.swift */; };
 		EA08313319D5EEF2003B90D7 /* post_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = EA08313219D5EEF2003B90D7 /* post_comments.json */; };
 		EA08313519D5EFC0003B90D7 /* types.json in Resources */ = {isa = PBXBuildFile; fileRef = EA08313419D5EFC0003B90D7 /* types.json */; };
@@ -265,6 +269,8 @@
 				F87897EF1A927864009316A5 /* Argo.framework in Frameworks */,
 				B312C1321A92CD4100E32873 /* Box.framework in Frameworks */,
 				F87897ED1A927856009316A5 /* Runes.framework in Frameworks */,
+				B3B1DE401A90E8820007817F /* Box.framework in Frameworks */,
+				B3B1DE3F1A90E7EE0007817F /* Argo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
