@@ -24,7 +24,12 @@ public func <-|<A where A: JSONResultDecodable, A == A.DecodedResultType>(json: 
 // Pull embedded optional value from JSON
 public func <-|?<A where A: JSONResultDecodable, A == A.DecodedResultType>(json: JSONValue, keys: [String]) -> JSONResult<A?> {
   let result: JSONResult<A> = json <-| keys
-  return result.map(pure)
+  switch result {
+  case .Failure:
+    return JSONResult<A?>(nil)
+  default:
+    return result.map(pure)
+  }
 }
 //
 //// Pull optional value from JSON
@@ -47,7 +52,12 @@ public func <-||<A where A: JSONResultDecodable, A == A.DecodedResultType>(json:
 // Pull embedded optional array from JSON
 public func <-||?<A where A: JSONResultDecodable, A == A.DecodedResultType>(json: JSONValue, keys: [String]) -> JSONResult<[A]?> {
   let result: JSONResult<[A]> = json <-|| keys
-  return result.map(pure)
+  switch result {
+  case .Failure:
+    return JSONResult<[A]?>(nil)
+  default:
+    return result.map(pure)
+  }
 }
 
 //// Pull optional array from JSON
