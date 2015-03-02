@@ -60,6 +60,12 @@ extension Bool: JSONResultDecodable {
   }
 }
 
+extension Float: JSONResultDecodable {
+  public static func decodeResult(j: JSONValue) -> JSONResult<Float> {
+    return makeResultDecodable(Float.decode,j)
+  }
+}
+
 //MARK: JSONEncodable
 extension String: JSONEncodable {
   public func encode() -> JSONValue {

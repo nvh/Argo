@@ -21,14 +21,14 @@ extension TestModel: JSONDecodable {
   }
 
   static func decode(j: JSONValue) -> TestModel? {
-    return TestModel.create
+    let f = TestModel.create
       <^> j <| "int"
       <*> j <| ["user_opt", "name"]
       <*> j <| "double"
       <*> j <| "float"
       <*> j <| "bool"
       <*> j <|? "int_opt"
-      <*> j <|| "string_array"
+    return f <*> j <|| "string_array"
       <*> j <||? "string_array_opt"
       <*> j <|| ["embedded", "string_array"]
       <*> j <||? ["embedded", "string_array_opt"]
