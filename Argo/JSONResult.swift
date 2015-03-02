@@ -34,7 +34,7 @@ extension JSONResult {
   }
 
   public init(_ value: T) {
-    self = .Success(Box(value))
+    self = pure(value)
   }
   
   public init(error: NSError) {
